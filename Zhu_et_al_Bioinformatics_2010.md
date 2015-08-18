@@ -1,5 +1,5 @@
 ---
-title: ChIPpeakAnno: a Bioconductor package to annotate ChIP-seq and ChIP-chip data
+title: ChIPpeakAnno a Bioconductor package to annotate ChIP-seq and ChIP-chip data
 doi: 10.1186/1471-2105-11-237
 tags: chip-seq, visualisation
 author: [Saket Choudhary]
