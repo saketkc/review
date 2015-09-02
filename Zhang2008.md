@@ -73,4 +73,40 @@ and the second one required for DNA activation
 ----End Digression-----
 
 
+ChIP-ChIP v/s ChIP-Seq:
+- ChIP-Seq tags represents only the ends of ChIP fragments and not the precise binding sites
+- Strand distance and approximate distance to the precise binding site can help peak resolution
+- Regional bias possible in ChIP-Seq due to mapping biases, chromatin structure of genome copy number variation
+- Control comes in handy to remove such biases. However small regions might not often have enough control tags for estimating the background scores.
 
+
+## Shift size modeling of tags
+
+- ChIP tags are often shifted towards 3' end.(WHY??: It says to 'better present the precise protein-DNA interaction site')
+- The problem arises because this shift size is unknown
+- The key feature used in modelling this shift size is to use both strand information.
+- Since sequencing happens from both ends, the density around a true binding site will be bimodal
+
+Given a bandwith where the peak s found and a threshold mfold-enrichment, MACS slides 2bandwidth windows
+across the genome to locate regions with total tags > mfold * (Number of tags in random region)
+
+MACS separates the Watson and Crick tags of top 1000 peaks and aligns them by midpoint between their Watson
+and Crick tags. Define the distance between the modes of watson and Crick peaks to be d. MACS shifts the tags by d/2 on
+the 3'side to better align with the true protein-DNA interaction site.
+
+## Detecting Peaks
+
+In paired experiments(with controls), the total control tag count is scaled to be same as the sample tag count. the duplicate tagsa
+are removed. Tag distribution is modeled as a Poisson distribution with mean and variance provided by the same parameter.
+Having shifted the tags by d/2, a 2d sized window slides to find regions with significant enrichment. Overlapping peaks are merged, and each tag poision is extededn d from its center, the location with highest fragment pileup is called the 'summit' assumed to be the precise binding
+site location.
+
+In cases where the candidate and control peaks show a correlation, it might make more sense to model using a dynamic parameter $\lambda_{BG}$
+rather than a unform $\lambda$
+
+E,pirical FDR = $\frac{Number of control peaks}{Number of ChIP peaks}$$
+
+Using a local lambda effectively captures the locan genomic biase from Chip sample alone in absence of a control sample.
+
+$\lambda_{local} = maxw
+()}
