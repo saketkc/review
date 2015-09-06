@@ -118,4 +118,12 @@ Key feature of MACS is that it relocates the tag by shifting them to d/2  in pre
 $\lambda_{local}$ effectively captures the genomic bias even when a control is not used and is also robust against low counts
 at the small loci
 
-A key metric of evaulation the qualiyty of peak calling is to compare the distance of peak summit with 
+A key metric of evaulation the qualiyty of peak calling is to compare the distance of peak summit with the motif center.
+Motifs are expected to be centered around the peak summits.
+
+## A note on bias
+
+Shorter read sequencers are known to preferentially sequnce shorter fragments in a ChIP-DNA pool.
+Activating TF factors in open chromatin region might thus often be over represented. Often it is 
+harder to ChIP regions in closed chromatin
+
