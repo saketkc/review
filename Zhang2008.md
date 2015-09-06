@@ -108,5 +108,14 @@ E,pirical FDR = $\frac{Number of control peaks}{Number of ChIP peaks}$$
 
 Using a local lambda effectively captures the locan genomic biase from Chip sample alone in absence of a control sample.
 
-$\lambda_{local} = maxw
-()}
+$\lambda_{local} = max(\lambda_{BG}, \lambda_{1k}, \lambda_{10k})$
+where the subscript denotes the length of region centered at the peak location.``
+
+
+## Model Evaluation
+
+Key feature of MACS is that it relocates the tag by shifting them to d/2  in pretext of a more accurate peak.
+$\lambda_{local}$ effectively captures the genomic bias even when a control is not used and is also robust against low counts
+at the small loci
+
+A key metric of evaulation the qualiyty of peak calling is to compare the distance of peak summit with 
