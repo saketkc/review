@@ -6,4 +6,4 @@
 - [Model-based Analysis of ChIP-Seq (MACS)](Zhang2008.md)
 
 [Motif]
-
+- [BLSSpeller: exhaustive comparative discovery of conserved cis regulatory elements](Witte_2015.md)
