@@ -29,7 +29,7 @@ The most discriminating feature appears to be splicing. Splicing efficiency is d
 
 <img src="images/splicing_enhancer.png" alt="image" />
 
-![image](alt_splicing.png)
+![image](images/alt_splicing.png)
 
 Exon splicing enhacers refers to sequence motifs located within exons that regulated splicing. These were found to be overrepresented in lincRNAs.
 
