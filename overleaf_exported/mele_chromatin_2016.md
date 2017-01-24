@@ -21,13 +21,13 @@ Splicing
 
 The most discriminating feature appears to be splicing. Splicing efficiency is defined as the ratio of the sume of abundance of different isoforms to the sum of isoforms with the unspliced isoform.
 
-<img src="isoform.png" alt="image" />
+<img src="images/isoform.png" alt="image" />
 
-<img src="splicing_efficiency.png" alt="image" />
+<img src="images/splicing_efficiency.png" alt="image" />
 
-<img src="splicing_efficiency_1.png" alt="image" />
+<img src="images/splicing_efficiency_1.png" alt="image" />
 
-<img src="splicing_enhancer.png" alt="image" />
+<img src="images/splicing_enhancer.png" alt="image" />
 
 ![image](alt_splicing.png)
 
