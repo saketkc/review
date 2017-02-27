@@ -168,7 +168,7 @@ Regulatory upstream translation:
 
 -   uORF translation also correlates with lower mRNA stabilit
 
-![image](stalling){width="\linewidth"}
+![image](images/stalling.png)
 
 Protein synthesis in-vivo
 
